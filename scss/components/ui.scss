@@ -1,0 +1,70 @@
+
+.ui {
+  &-view {
+    @include fixed(null, 0, 40px, 0);
+    @include center($desktop);
+    padding: 0 10px;
+    height: 0;
+    min-width: 320px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  &-share {
+    display: flex;
+    align-items: center;
+    .share-item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 40px;
+      cursor: pointer;
+      @include below($sm) {
+        margin-right: 20px;
+      }
+    }
+    .icon {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    .ui-action {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      opacity: .8;
+      transition: all ease-in-out 400ms;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+      }
+      .icon {
+        display: block;
+        margin-bottom: 0;
+        transform: translateX(0);
+        transition: all ease-in-out 400ms;
+      }
+
+      &:hover {
+        opacity: 1;
+        span {
+          text-decoration: underline;
+        }
+        .icon {
+          transform: translateX(10px);
+        }
+      }
+      
+    }
+  }
+
+}
